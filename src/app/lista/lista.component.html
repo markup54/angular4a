@@ -1,0 +1,13 @@
+<h3>Wszystkie samochody</h3>
+<div class="grid text-center">
+<div class="g-col-4" *ngFor = "let auto of autka" >
+  <div class="card ms-3 mb-3" style="width: 10rem;">
+  <img class="miniatura card-img-top" src="{{auto.url}}">
+  <div class="card-body">
+  <h6 class="card-title">{{auto.nazwa}}</h6>
+  <p class="card-text">Ranking: {{auto.ranking}}</p>
+  <button class="btn btn-primary" *ngIf="auto.niedoceniony" type="button" (click)="auto.ranking=1;auto.niedoceniony = false">+1</button>
+  </div>
+  </div>
+  </div>
+</div>

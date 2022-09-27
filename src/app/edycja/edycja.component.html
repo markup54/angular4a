@@ -1,0 +1,14 @@
+<h3>Wszystkie samochody</h3>
+
+<div class="g-col-4" *ngFor = "let auto of autka" >
+
+  <img class="miniatura card-img-top" src="{{auto.url}}">
+  <div class="card-body">
+  <input type="text" [(ngModel)]="auto.nazwa">
+  <p class="card-text">Ranking: {{auto.ranking}}</p>
+  <button class="btn btn-primary" *ngIf="auto.niedoceniony" type="button" (click)="auto.ranking=1;auto.niedoceniony = false">+1</button>
+  </div>
+  </div>
+
+
+
